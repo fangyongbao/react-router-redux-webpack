@@ -8,13 +8,20 @@
 4. webpack.dev.config.js  定义webpack开发配置
 5. webpack.prod.config.js  定义webpack生产配置
 
-改项目中包含了
-  路由跳转，
-  数据请求模块封装，
-  webview与js交互模块封装，
-  配置文件分离，
-  自动打包多个html文件，
-  以一个简单的例子实现 dispatch->action->reducer->state->view流程，
-  定义共用sass文件，
+**改项目中包含了：**<br>
+  路由跳转，<br>
+  数据请求模块封装，<br>
+  webview与js交互模块封装，<br>
+  配置文件分离，<br>
+  自动打包多个html文件，<br>
+  以一个简单的例子实现 dispatch->action->reducer->state->view流程，<br>
+  定义共用sass文件，<br>
   定义第三方字体库
+
+**使用方式：**<br>
+1.npm run start 开启服务器(包含热更新)<br>
+2.浏览器访问localhost:3000<br>
+3.npm run build打包
+
+
   
