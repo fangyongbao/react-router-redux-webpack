@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.m-header { height: 60px; line-height: 60px; text-align: center; font-size: 18px; color: #333;
+.m-header { text-align: center; font-size: 18px; color: #333; display: flex; flex-flow: row; justify-content: center;
 	a { padding: 10px 20px; color: #333;
 		&.active { background: green; color: #fff; }
 	}

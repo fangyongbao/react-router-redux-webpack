@@ -10,19 +10,23 @@
 
 **改项目中包含了：**<br>
 > 
-  路由跳转，<br>
-  数据请求模块封装，<br>
-  webview与js交互模块封装，<br>
-  配置文件分离，<br>
-  自动打包多个html文件，<br>
-  以一个简单的例子实现 dispatch->action->reducer->state->view流程，<br>
-  定义共用sass文件，<br>
+  路由跳转<br>
+  数据请求模块封装<br>
+  webview与js交互模块封装<br>
+  配置文件分离<br>
+  自动打包多个html文件<br>
+  以一个简单的例子实现 dispatch->action->reducer->state->view流程<br>
+  定义共用sass文件<br>
+  提取css<br>
+  css自动添加浏览器前缀<br>
+  上线包添加静态资源版本号<br>
+  上线包css/js压缩<br>
   定义第三方字体库
 
 **使用方式：**<br>
 > 
-1.npm run start 开启服务器(包含热更新)<br>
-2.浏览器访问localhost:3000<br>
+1.npm run dev 开启服务器(包含热更新)<br>
+2.浏览器访问localhost:80<br>
 3.npm run build打包
 
 

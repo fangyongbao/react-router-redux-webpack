@@ -1,6 +1,10 @@
 var path = require('path');
 var webpack = require('webpack');
 var helpers = require('./helpers');
+//自动添加css浏览器前缀
+var autoprefixer = require('autoprefixer');
+//提取css
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
     //入口文件
@@ -9,9 +13,7 @@ module.exports = {
     //输出文件
     output: {
         path: path.join(__dirname, '/dist'),
-        //热更新资源存放目录
-        //publicPath:'/',
-        filename: 'js/[name].js',
+        filename: 'js/[name].js'
     },
 
     resolve: {
@@ -35,27 +37,32 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss/,
-                loader: 'style-loader!css-loader!sass-loader'
-            }, 
-            {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                loader: 'style-loader!css-loader!postcss-loader'
+            },
+            { 
+                test: /\.scss$/, 
+                //提取公共scss
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader!postcss-loader")
+                //loader: 'style-loader!css-loader!sass-loader!postcss-loader'
             },
             { 
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 loader: 'url-loader?limit=1000&name=images/[name].[ext]',
-                query:{}
+                //添加引用版本号
+                query:"v="+new Date().getTime()
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                loader: 'url-loader',
-                query: {
-                  limit: 10000,
-                  name: 'fonts/[name].[ext]'
-                }
+                loader: 'url-loader?limit=1000&name=images/[name].[ext]',
+                //添加引用版本号
+                query:"v="+new Date().getTime()
             }
         ]      
+    },
+    //postcss配置
+    postcss: function () {
+        return [autoprefixer]
     },
     //插件项
     plugins: [

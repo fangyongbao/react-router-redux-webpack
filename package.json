@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --hot --port 3000 --progress --profile --colors --watch --display-error-details  --display-cached  --config ./webpack.dev.config.js",
+    "dev": "webpack-dev-server --inline --hot --port 80 --progress --profile --colors --watch --display-error-details  --display-cached  --config ./webpack.dev.config.js",
     "build": "webpack --progress --profile --colors --display-error-details --display-cached --bail   --config ./webpack.prod.config.js"
   },
   "author": "maicon",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.4.1",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-plugin-transform-runtime": "^6.0.0",
@@ -24,6 +25,7 @@
     "html-webpack-plugin": "^2.8.1",
     "json-loader": "^0.5.4",
     "node-sass": "^3.8.0",
+    "postcss-loader": "^0.11.1",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

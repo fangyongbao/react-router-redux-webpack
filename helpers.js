@@ -12,6 +12,7 @@ function getHtmlPlugin() {
             new HtmlWebpackPlugin({
                 filename:buildPath+n+'.html',
                 template:name,
+                //是否允许将依赖写入html,多个html开发时，需要关闭，手动写入
                 inject:false
             })
         )
