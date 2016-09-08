@@ -1,7 +1,8 @@
 import reactDom from 'react-dom';
 import React from 'react';
 import 'common.scss';
-import 'es6-promise';
+//transform-runtime只会对es6的语法进行转换，而不会对新api进行转换。
+//如果需要转换新api，就要引入babel-polyfill
 import 'babel-polyfill';
 import {Provider} from 'react-redux';
 import IndexStore from '../src/store/IndexStore';

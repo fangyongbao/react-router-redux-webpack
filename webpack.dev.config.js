@@ -18,7 +18,7 @@ module.exports = Object.assign({}, commonWebpack, {
         //热更新插件
         new webpack.HotModuleReplacementPlugin(),
         // 提取css为单文件
-        new ExtractTextPlugin("css/style.css"),
+        new ExtractTextPlugin("style.css"),
         //React 官方提供的代码是已经合并的, 这个是 Webpack 不推荐的用法,
         //在合并的代码上进行定制有点麻烦, Webpack 提供了设置环境变量来优化代码的方案:
         new webpack.DefinePlugin({

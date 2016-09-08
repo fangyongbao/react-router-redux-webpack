@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --port 80 --progress --profile --colors --watch --display-error-details  --display-cached  --config ./webpack.dev.config.js",
+    "dev": "webpack-dev-server --inline --hot --port 8080 --progress --profile --colors --watch --display-error-details  --display-cached  --config ./webpack.dev.config.js",
     "build": "webpack --progress --profile --colors --display-error-details --display-cached --bail   --config ./webpack.prod.config.js"
   },
   "author": "maicon",
@@ -16,7 +16,8 @@
     "babel-plugin-transform-runtime": "^6.0.0",
     "babel-preset-es2015": "^6.0.0",
     "babel-preset-react": "^6.0.0",
-    "copy-webpack-plugin": "^3.0.1",
+    "babel-register": "^6.14.0",
+    "babel-runtime": "^6.11.6",
     "css-loader": "^0.23.0",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^1.0.1",
@@ -33,7 +34,6 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.13.0",
-    "es6-promise": "^3.2.1",
     "jquery": "^3.1.0",
     "md5": "^2.2.1",
     "react": "^15.3.0",
