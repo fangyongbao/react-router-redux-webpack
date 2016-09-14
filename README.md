@@ -26,7 +26,7 @@
 **使用方式：**<br>
 > 
 1.npm run dev 开启服务器(包含热更新)<br>
-2.浏览器访问localhost:80<br>
+2.浏览器访问localhost:8080<br>
 3.npm run build打包
 
 
