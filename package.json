@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --port 8080 --progress --profile --colors --watch --display-error-details  --display-cached  --config ./webpack.dev.config.js",
+    "dev": "webpack-dev-server --inline --hot --port 9090 --history-api-fallback --progress --profile --colors --watch --display-error-details  --display-cached  --config ./webpack.dev.config.js",
     "build": "webpack --progress --profile --colors --display-error-details --display-cached --bail   --config ./webpack.prod.config.js"
   },
   "author": "maicon",

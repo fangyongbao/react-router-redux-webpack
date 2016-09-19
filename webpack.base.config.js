@@ -13,7 +13,11 @@ module.exports = {
     //输出文件
     output: {
         path: path.join(__dirname, '/dist'),
-        filename: 'js/[name].js'
+        //被列在entry中，需要被打包出来的文件命名配置
+        filename: 'js/[name].js',
+        //使webpack支持分片thunks
+        //未被列在entry中，需要被打包出来的文件命名配置
+        chunkFilename: 'js/[name].js'
     },
 
     resolve: {
@@ -40,8 +44,8 @@ module.exports = {
             { 
                 test: /\.scss$/, 
                 //提取公共scss
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader!postcss-loader")
-                //loader: 'style-loader!css-loader!sass-loader!postcss-loader'
+                //loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader!postcss-loader")
+                loader: 'style-loader!css-loader!sass-loader!postcss-loader'
             },
             { 
                 test: /\.(jpe?g|png|gif|svg)$/i,

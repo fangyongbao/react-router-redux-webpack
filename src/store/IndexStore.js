@@ -1,6 +1,6 @@
 import {createStore,compose,applyMiddleware} from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import RooterReducer from '../reducer/Index/RooterReducer.js';
+import RooterReducer from '../reducer/index/RooterReducer.js';
 
 const createStoreWithMiddleware = applyMiddleware(
 	thunkMiddleware

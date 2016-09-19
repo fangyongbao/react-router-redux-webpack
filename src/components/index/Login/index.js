@@ -1,34 +1,37 @@
 import React,{Component} from 'react';
+import { Lifecycle } from 'react-router'
 import './Login.scss';
+import $ from 'jquery';
 import { login } from '../../../action/IndexAction';
-//导入数据请求模块
+// 导入数据请求模块
 import { ajax } from '../../../assets/js/Util'
-//导入webview与js交互模块
+// 导入webview与js交互模块
 import { JsBridge } from '../../../assets/js/JsBridge'
 export default class Login extends Component{
     constructor(props) {
         super(props)
-        //初始化state
+        // 初始化state
         this.state = {}
     }
+    
+    mixins: [ Lifecycle ]
 
-    //只会在装载之前调用一次，在 render 之前调用
+    // 只会在装载之前调用一次
 	componentWillMount(){
 		
 	}
     
-    //组件渲染完成后调用
+    // 组件渲染完成后调用
 	componentDidMount(){
-        
+        console.log(this);
 	}
 
-    //更新前调用
+    // 更新前调用
 	componentWillUpdate(){
         
 	}
 
     Login(){
-        console.log(this);
         const { LoginReducer, dispatch } = this.props;
         var data = {
         	name: "abao"

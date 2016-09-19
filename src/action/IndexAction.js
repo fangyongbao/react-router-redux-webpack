@@ -1,4 +1,4 @@
-import { ajax } from '../assets/js/Util'
+import { ajax } from '../assets/js/Ajax'
 import { JsBridge } from '../assets/js/JsBridge'
 import { LOGIN_GET_USER_OBJ, LIST_OBJ } from '../constant/IndexConstant';
 

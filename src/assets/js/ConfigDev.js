@@ -1,1 +1,1 @@
-export const STATIC_RUL = 'http://172.16.1.112/i_cubee_com/public/api.php';
+export const STATIC_RUL = 'http://appdev.huanhuba.com';

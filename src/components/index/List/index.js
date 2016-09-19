@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import './List.scss';
+import $ from 'jquery';
 export default class List extends Component{
     render(){
         return(
